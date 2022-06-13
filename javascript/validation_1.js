@@ -93,4 +93,21 @@ function validateForm() {
         text = 'please give us suggestion'
         document.getElementById("OP10").innerHTML = text;
     }
+
+     
+        if(document.getElementById('male').checked) { 
+          
+        } 
+        else if(document.getElementById('female').checked) { 
+            
+        } 
+        else if(document.getElementById('other').checked) { 
+            //  
+        } 
+       
+        else { 
+            document.getElementById("error").innerHTML 
+                = "You have not selected any season"; 
+        } 
+     
 }
