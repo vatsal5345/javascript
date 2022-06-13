@@ -95,19 +95,32 @@ function validateForm() {
     }
 
      
-        if(document.getElementById('male').checked) { 
+        // if(document.getElementById('male').checked) { 
           
-        } 
-        else if(document.getElementById('female').checked) { 
+        // } 
+        // else if(document.getElementsByName("gender").checked) { 
             
-        } 
-        else if(document.getElementById('other').checked) { 
-            //  
-        } 
+        // } 
+        // else if(document.getElementById('other').checked) { 
+        
+        // } 
        
-        else { 
-            document.getElementById("error").innerHTML 
-                = "You have not selected any season"; 
-        } 
+        // else { 
+        //     document.getElementById("error").innerHTML 
+        //         = "You have not selected any option"; 
+        // } 
+        var radios = document.getElementsByName("gender");
+    var formValid = false;
+
+    var i = 0;
+    while (!formValid && i < radios.length) {
+        if (radios[i].checked) formValid = true;
+        i++;        
+    }
+
+    if (!formValid)  {
+    document.getElementById("genderErr").innerHTML 
+           = "Please select any of the given options"; 
+  }
      
 }
